@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: #030509;
+  color: #f1f5f9;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #05070d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2744;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #26385f;
+}
+
+/* Cosmic Glow & Radial Helpers */
+.cosmic-radial-bg {
+  background: radial-gradient(circle at 50% 30%, rgba(14, 116, 144, 0.12) 0%, rgba(5, 7, 13, 0.8) 55%, #030509 100%);
+}
+
+.cosmic-panel {
+  background: rgba(10, 15, 26, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cosmic-panel-active {
+  background: rgba(13, 20, 36, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.12);
+}
+
+.cinematic-mask {
+  mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 40%, transparent 95%);
+  -webkit-mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 40%, transparent 95%);
+}
+
+/* Star Twinkle Keyframe */
+@keyframes starTwinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 0.9; transform: scale(1.1); }
+}
+
+.star-twinkle {
+  animation: starTwinkle 4s ease-in-out infinite;
+}
+
+/* Subtle Grid Background */
+.space-grid-pattern {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
